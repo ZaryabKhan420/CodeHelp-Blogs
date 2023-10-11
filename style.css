@@ -1,0 +1,225 @@
+
+        /* ==================
+            NECESSARY CSS
+        ================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Caudex:wght@400;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto:wght@100&family=Rubik:wght@500&family=Simonetta&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #FFFDFF;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+        /* ==================
+            Utility Classes
+        ================== */
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.primary-heading{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.para{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: #80849c;
+}
+
+.image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+        /* ==================
+            Header Section
+        ================== */
+
+#header{
+    width: 100%;
+    padding: 2rem 0;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+#header > .para{
+    text-align: center;
+    width: 50%;
+}
+
+        /* ==================
+            Main Section
+        ================== */
+
+.cards-container{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    padding-bottom: 5rem;
+}
+
+.card{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card-image{
+    position: relative;
+    overflow: hidden;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+    border-radius: 0.5rem;
+}
+
+.card-image > a > img{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.8s;
+}
+
+.card-image > a:hover img{
+    scale: 1.1;
+}
+
+.card > a{
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    transition: 0.2s all linear;
+}
+
+.card > a:hover{
+    color: #60318F;
+}
+
+.card h4{
+    font-size: 1.2rem;
+    color: #60318F;
+}
+
+.card .para{
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+.avatar-row{
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.avatar{
+    border: 1px solid rgb(76, 75, 75);
+    background-color: #e9e5e5;
+    border-radius: 50%;
+    width: 3rem;
+}
+
+.avatar-row-left{
+    justify-content: start;
+    gap: 1.5rem;
+}
+
+.avatar-info{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.avatar-row-right > a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 1px solid #60318F;
+    color: #60318F;
+}
+
+    /* Responsiveness  */
+
+
+    /* Desktop  */
+
+@media (max-width:1250px) {
+    
+    .cards-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    html{
+        font-size: 56.25%;
+    }
+    
+}
+
+@media (max-width:900px) {
+
+    .cards-container{
+        width: 90%;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+        /* Mobiles  */
+
+@media (max-width:500px) {
+
+    .cards-container{
+        width: 90%;
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap: 3rem;
+    }
+
+    html{
+        font-size: 46%;
+    }
+
+    #header > .para{
+        text-align: center;
+        width: 70%;
+    }
+}
